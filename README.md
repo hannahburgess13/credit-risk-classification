@@ -1,35 +1,25 @@
 # credit-risk-classification
 
-# Background
-In this Challenge, you’ll use various techniques to train and evaluate a model based on loan risk. You’ll use a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
+## Overview of the Analysis
 
-# Instructions
-The instructions for this Challenge are divided into the following subsections:
+In this Challenge, I used various techniques to train and evaluate a model based on loan risk. A dataset was used from historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers for healthy and high risk loans. 
 
-# Split the Data into Training and Testing Sets
+- to start, the data was split into training and testing sets.
+  - ths included changing lending_data.csv into a pandas dataframe, and then spliting the "loan_status" colum from the remaining columns.
+- a logistic regression model was then created
+  - predictions were made from the training data, and then tested the model's performance by creating a confusion matrix.
 
-Create a Logistic Regression Model with the Original Data
+## Results
 
-Write a Credit Risk Analysis Report
+* Machine Learning Model 1:
+  * The logistic regression model does a good job of prediciting healthy and high risk loans. From the chart, we can see that the model was able to predict a healthy loan with 100% precision, and 85% precision for high risk loans. We can also see that overall, this model has 99% accuracy when prediciting such factors.  
 
-Split the Data into Training and Testing Sets
-Open the starter code notebook and use it to complete the following steps:
 
-Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
 
-Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
+* Machine Learning Model 2:
+  * The logistic regression model works well with this oversampled data, as the results yeild a balance accuracy score of 0.99, showing a 99% accuracy for both healthy and high risk loans, as well as 99% precision.
 
-# Create a Logistic Regression Model with the Original Data
+    
+## Summary
 
-Use your knowledge of logistic regression to complete the following steps:
-
-Fit a logistic regression model by using the training data (X_train and y_train).
-
-Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
-
-Evaluate the model’s performance by doing the following:
-
-  - Generate a confusion matrix.
-  - Print the classification report.
-
-Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
+Overall, both models did very well in predicting a healthy or high risk loan. However, through the results, machine learning model 2 had a higher probability of accurately and precisely predicitng the outcome. This being said, model 1 had an 85% precision for high risk loans, which is useful and could yield mostly correct results. Both models can predict seemingly accurate results, but I would most likely recomment model 2 for its higher accuracy rate. 
